@@ -11,16 +11,16 @@ void t_bubblesort (int v[], int n){
     stop = (double) clock() / CLOCKS_PER_SEC;
     elapsed = stop - start;
     printf("Numero de trocas usando Bubblesort: %d \n", contarTrocas);
-    printf("Tempo total em segundos para Bubblesort: %f\n\n", elapsed);
+    printf("Tempo total em segundos para Bubblesort: %f\n", elapsed);
 }
 
-void t_quicksort(int v[], int n){
+void t_quicksort(int v[], int inicio, int fim){
     start = (double) clock () / CLOCKS_PER_SEC;
-    quicksort(v,0,n);
+    quicksort(v,inicio,fim);
     stop = (double) clock() / CLOCKS_PER_SEC;
     elapsed = stop - start;
-    printf("Numero de trocas usando Quicksort: %d \n", contarTrocas);
-    printf("Tempo total em segundos para Quicksort: %f\n\n", elapsed);
+    //printf("Numero de trocas usando Quicksort: %d \n", contarTrocas);
+    printf("Tempo total em segundos para Quicksort: %f\n", elapsed);
 }
 
 void t_insertion_sort (int v[], int n) {
@@ -28,8 +28,7 @@ void t_insertion_sort (int v[], int n) {
     insertion_sort(v, n);
     stop = (double) clock() / CLOCKS_PER_SEC;
     elapsed = stop - start;
-    printf("Numero de trocas usando Insertion sort: %d \n", contarTrocas);
-    printf("Tempo total em segundos para Insertion sort: %f\n\n", elapsed);
+    printf("Tempo total em segundos para Insertion sort: %f\n", elapsed);
 }
 
 void t_selection_sort(int v[], int n) {
@@ -37,7 +36,7 @@ void t_selection_sort(int v[], int n) {
     selection_sort(v,n);
     stop = (double) clock() / CLOCKS_PER_SEC;
     elapsed = stop - start;
-    printf("Tempo total em segundos para Selection sort: %f\n\n", elapsed);
+    printf("Tempo total em segundos para Selection sort: %f\n", elapsed);
 }
 
 void t_mergesort(int v[], int n) {
@@ -45,7 +44,7 @@ void t_mergesort(int v[], int n) {
     mergesort(v, n);
     stop = (double) clock() / CLOCKS_PER_SEC;
     elapsed = stop - start;
-    printf("Tempo total em segundos para Mergesort: %f\n\n", elapsed);
+    printf("Tempo total em segundos para Mergesort: %f\n", elapsed);
 }
 
 void t_heapsort(int v[], int n) {
@@ -53,5 +52,5 @@ void t_heapsort(int v[], int n) {
     heapsort(v, n);
     stop = (double) clock() / CLOCKS_PER_SEC;
     elapsed = stop - start;
-    printf("Tempo total em segundos para Heapsort: %f\n\n", elapsed);
+    printf("Tempo total em segundos para Heapsort: %f\n", elapsed);
 }
