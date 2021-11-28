@@ -43,7 +43,7 @@ void quicksort(int v[],int inicio,int fim){
             v[j] = aux;
             i++;
             j--;
-            contarTrocas++;
+            //contarTrocas++;
         }
     }
     if(j > inicio){
@@ -60,7 +60,6 @@ void insertion_sort(int v[], int n){
         temp = v[i];
         for (j = i - 1; j >= 0 && v[j] > temp; j--){
             v[j+1] = v[j];
-            contarTrocas++;
         }
         v[j+1] = temp;
     }
@@ -136,15 +135,15 @@ void mergesort (int v[], int n){
     }
 }
 
-/*void troca (int *a, int *b){
+void troca (int *a, int *b){
     int temp;
     temp = *a;
     *a = *b;
     *b = temp;
-}*/
+}
 
 //Transforma vetor em heap (arvore binaria)
-/*void heapify (int v[], int m){
+void heapify (int v[], int m){
     for (int k = 1; k < m; ++k) {
         int f = k+1;
         while (f > 1 && v[f/2] < v[f]) {
@@ -152,9 +151,9 @@ void mergesort (int v[], int n){
             f /= 2;
         }
     }
-}*/
+}
 
-/*void peneira (int v[], int m) {
+void peneira (int v[], int m) {
     int p = 1, f = 2, x = v[1];
     while (f <= m) {
         if (f < m && v[f] < v[f + 1])
@@ -167,14 +166,14 @@ void mergesort (int v[], int n){
         f = 2*p;
     }
     v[p] = x;
-}*/
+}
 
-/*void heapsort (int v[], int x){
+void heapsort (int v[], int x){
     int i;
     heapify (v,x);
     for (i = x; i >= 2; --i){
         troca (&v[1], &v[i]);
         peneira (v, i-1);
     }
-}*/
+}
 
