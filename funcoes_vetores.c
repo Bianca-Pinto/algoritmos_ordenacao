@@ -27,7 +27,9 @@ void vetorDecrescente(int v[], int n){
 }
 
 void imprimirVetores(int v[], int n) {
+    printf("\nVetor: ");
     for (int i = 0; i < n; i++) {
-        printf("\nVetor: %d, ", v[i]);
+        printf("%d, ", v[i]);
     }
+    printf("\n\n");
 }
